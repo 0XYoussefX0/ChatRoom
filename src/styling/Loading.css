@@ -1,0 +1,37 @@
+.loadingContainer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+.spinner {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: radial-gradient(farthest-side, #3f52ff 94%, #0000) top/9px 9px
+      no-repeat,
+    conic-gradient(#0000 30%, #3f52ff);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 9px), #000 0);
+  animation: spinner-c7wet2 1s infinite linear;
+}
+
+@keyframes spinner-c7wet2 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+.loading {
+  background: linear-gradient(90deg, #4d5bfd 0%, #8453e6 100%, #996fea 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #000;
+  font-family: "Plus Jakarta Sans";
+  font-size: 77.376px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.774px;
+}

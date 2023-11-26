@@ -1,0 +1,350 @@
+.chatRoom {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+.sideBar {
+  gap: 50px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+  background: rgba(21, 22, 23, 0.4);
+}
+.routes > div > a {
+  color: #e1e1e1;
+  font-family: "FONTSPRING DEMO - Lufga";
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+.routes {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+.routes > div {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 10px 10px 10px;
+}
+
+.sideBarBox {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+  padding-top: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.line2 {
+  height: 100%;
+  width: 1px;
+  background-color: #f0f1ff;
+}
+.active {
+  border: 2px solid white;
+  border-radius: 10px;
+  background: #0a7927;
+}
+.sideBar-bottom {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.user-profile-bottom {
+  color: #fff;
+  font-family: "FONTSPRING DEMO - Lufga";
+  font-size: 1rem;
+  font-weight: 400;
+}
+input[placeholder="Search"] {
+  border-radius: 8px;
+  background: #f0f1ff;
+  border: none;
+  height: 3.12rem;
+  width: 267px;
+  color: black;
+  font-family: "Plus Jakarta Sans";
+  font-size: 0.87rem;
+  font-weight: 400;
+  padding-left: 36px;
+  outline: none;
+}
+input[placeholder="Search"]::placeholder {
+  color: #908e91;
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.searchBox {
+  position: relative;
+  margin: 20px 28px;
+  display: flex;
+  align-items: center;
+}
+.searchBox > img {
+  position: absolute;
+  padding: 16px 14px;
+}
+.searchSection-title {
+  color: #fff;
+  font-family: "FONTSPRING DEMO - Lufga";
+  font-size: 2rem;
+  font-weight: 400;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  margin-left: 30px;
+}
+.line3 {
+  width: 100%;
+  height: 1px;
+  background-color: #f0f1ff;
+}
+.messageWrapper {
+  border-radius: 15px;
+  background: #f0f1ff;
+  margin: 0 16px;
+  padding: 12px;
+  display: flex;
+  gap: 12px;
+  width: 291px;
+  margin-bottom: 8px;
+}
+.messageBox {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+.messageInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+.chatInterface {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.statusIndicators {
+  display: flex;
+  gap: 11px;
+  margin: 8px 0px 8px 16px;
+  align-items: center;
+}
+.contentBody {
+  flex: 1;
+  display: flex;
+}
+.messageSender {
+  color: black;
+  font-family: "Plus Jakarta Sans";
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.message {
+  color: #6a6a6f;
+  font-family: "Plus Jakarta Sans";
+  font-size: 13px;
+  font-weight: 500;
+}
+.messageTime {
+  font-family: "Plus Jakarta Sans";
+  color: #908e91;
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.messageNum {
+  color: white;
+  background-color: #6d8cfd;
+  font-family: "Plus Jakarta Sans";
+  font-size: 11px;
+  font-weight: 400;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chat-partner-status {
+  font-family: "Plus Jakarta Sans";
+  font-size: 13px;
+  font-weight: 600;
+}
+.typingIndicator {
+  color: #77ed91;
+  font-family: "Plus Jakarta Sans";
+  font-size: 13px;
+  font-weight: 600;
+}
+.chat-partner-name {
+  color: #000;
+  font-family: "Plus Jakarta Sans";
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.conversationArea {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.chatInput {
+  height: 68px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  box-shadow: 0px -5px 8px 0px rgba(0, 0, 0, 0.06);
+}
+.micIcon {
+  width: 10.29px;
+  height: 18px;
+  padding: 13px 22px;
+  margin: 10px;
+  cursor: pointer;
+}
+.micIcon:hover {
+  background-color: #f0f1ff;
+  border-radius: 11px;
+}
+.uploadIcon {
+  width: 18px;
+  height: 18px;
+  padding: 13px 22px;
+  margin: 10px;
+  cursor: pointer;
+}
+.uploadIcon:hover {
+  background-color: #f0f1ff;
+  border-radius: 11px;
+}
+
+.submitChatInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+.chatWindow {
+  background: #f6f8fa;
+  flex: 1;
+  overflow: scroll;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 20px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 20px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #28e752;
+    border-radius: 20px;
+  }
+  &::-webkit-scrollbar-track-piece:end {
+    margin-bottom: 13px;
+  }
+  &::-webkit-scrollbar-track-piece:start {
+    margin-top: 13px;
+  }
+}
+.chatWindow:hover::-webkit-scrollbar-thumb {
+  background: white;
+}
+input[placeholder="Start typing..."] {
+  background: #ffffff;
+  border: none;
+  flex: 1;
+  color: black;
+  font-family: "FONTSPRING DEMO - Lufga";
+  font-size: 0.87rem;
+  font-weight: 400;
+  outline: none;
+  border-top: 1px solid #f0f1ff;
+}
+input[placeholder="Start typing..."]::placeholder {
+  color: #6a6a6f;
+  margin: auto 0;
+}
+.theMessage {
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 145%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-width: 50%;
+  padding: 12px;
+  margin-top: 14px;
+  box-sizing: border-box;
+}
+.sent {
+  background-color: #3f52ff;
+  color: white;
+  border-radius: 12px 12px 2px 12px;
+  align-items: end;
+  margin-left: auto;
+  margin-right: 14px;
+  float: right;
+}
+.received {
+  background-color: #996fea;
+  color: white;
+  border-radius: 2px 12px 12px 12px;
+  align-items: start;
+  margin-right: auto;
+  margin-left: 14px;
+  float: left;
+}
+.sidebar-bottom-user-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "FONTSPRING DEMO - Lufga";
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: white;
+}
+.chatWindow2 {
+  display: flex;
+  flex-direction: column;
+}
+.dateHeader {
+  background-color: black;
+  color: white;
+  border-radius: 12px 12px 12px 12px;
+  margin: 14px auto;
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-weight: 400;
+  padding: 12px;
+}
+.friendsList::-webkit-scrollbar {
+  display: none;
+}
+.friendsList {
+  scrollbar-width: none;
+}

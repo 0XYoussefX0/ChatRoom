@@ -1,0 +1,473 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#root {
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+}
+.homePage {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+h1 {
+  text-align: center;
+}
+nav {
+  width: 100%;
+  margin-top: 20px;
+}
+ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.Logo {
+  width: 9rem;
+  height: 2.12rem;
+}
+li:nth-child(1) {
+  flex: 1;
+}
+ul > li:nth-child(1) > a {
+  color: #000;
+  text-decoration: none;
+  font-family: "Plus Jakarta Sans";
+  font-size: 33.488px;
+  font-weight: 800;
+  letter-spacing: -0.335px;
+  margin-left: 16px;
+}
+ul > li:nth-child(2) > a {
+  text-decoration: none;
+  padding: 9.92px 33.92px 11px 33.92px;
+  margin-right: 8px;
+  border-radius: 21.022px;
+  color: #3f52ff;
+  font-family: "Plus Jakarta Sans";
+  font-size: 15.456px;
+  font-weight: 600;
+  border: 2.628px solid transparent;
+}
+ul > li:nth-child(2) > a:hover {
+  background-color: #f2f3ff;
+  transition: background-color 0.3s ease-out;
+}
+ul > li:nth-child(3) > a,
+.homePageContent > a {
+  border: 2.628px solid #263bff;
+  background: #3f52ff;
+  text-decoration: none;
+  border-radius: 21px;
+  padding: 9.92px 33.92px 11px 33.92px;
+  margin-right: 16px;
+  color: #fff;
+  font-family: "Plus Jakarta Sans";
+  font-size: 15.456px;
+  font-weight: 600;
+}
+ul > li:nth-child(3) > a:hover,
+.homePageContent > a:hover {
+  border-color: #4d5fff;
+  background-color: #5a6cff;
+  transition: border-color 0.3s ease-out, background-color 0.3s ease-out;
+}
+.line {
+  width: 100%;
+  height: 2px;
+  background: #f8f8f8;
+  margin-top: 21px;
+}
+.homePageContent {
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.homePageContent > img {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+.homePageContent > img:nth-child(2) {
+  bottom: 90px;
+  right: 60px;
+}
+.homePageContent > img:nth-child(3) {
+  bottom: 40px;
+  left: 90px;
+}
+h1,
+.avatarPage > h1 {
+  color: #000;
+  font-family: "Plus Jakarta Sans";
+  font-size: 77.376px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.774px;
+}
+h1 > span,
+.avatarPage > h1 {
+  background: linear-gradient(90deg, #4d5bfd 0%, #8453e6 100%, #996fea 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.homePageContent > p {
+  margin-top: 21px;
+  margin-bottom: 53px;
+  color: #555;
+  text-align: center;
+  font-family: "Plus Jakarta Sans";
+  font-size: 20.184px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 162%; /* 32.699px */
+  letter-spacing: -0.202px;
+}
+.SignUp > a {
+  text-decoration: none;
+}
+.backLink {
+  color: #3f52ff;
+  font-family: "Plus Jakarta Sans";
+  font-size: 14.018px;
+  font-weight: 600;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 20px;
+  padding-left: 30px;
+}
+.backLink > div {
+  border-radius: 9px;
+  background: #f0f1ff;
+  padding: 12px 14px 12.29px 13.69px;
+}
+.SignUp {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+.inputGroup {
+  position: relative;
+  margin-top: 16px;
+}
+.inputGroup > label {
+  position: absolute;
+  color: rgba(95, 99, 104, 0.8);
+  font-family: "Plus Jakarta Sans";
+  font-weight: 500;
+  font-size: 0.87rem;
+  top: 47%;
+  left: 5px;
+  z-index: 1;
+  padding: 0 0.7rem;
+  transform: translateY(-50%);
+  transition: 0.5s;
+  pointer-events: none;
+}
+.inputGroup > input:focus ~ label {
+  top: 0;
+  font-size: 12px;
+  background: white;
+  color: #3f52ff;
+  padding: 0 0.4rem;
+}
+.SignUpHeader > h2 {
+  font-size: 2.25rem;
+  color: #3f52ff;
+  font-family: "Plus Jakarta Sans";
+  font-weight: 600;
+}
+.SignUpHeader > p,
+.OrDivider > p {
+  color: #919192;
+  font-family: "Plus Jakarta Sans";
+  font-size: 1rem;
+  font-weight: 400;
+}
+.OrLine {
+  width: 12.5rem;
+  height: 1px;
+  background-color: #919192;
+}
+.SignUpBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto auto;
+}
+.social-media-icons-wrapper {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.OrDivider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.RememberForgotWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 33px;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.inputGroup > img {
+  cursor: pointer;
+  width: 1.25rem;
+  height: 1.25rem;
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+}
+.RememberForgotWrapper > a {
+  color: #3f52ff;
+  font-family: "Plus Jakarta Sans";
+  font-size: 0.87rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+.RememberForgotWrapper > a:hover {
+  color: rgb(144, 157, 255);
+  transition: color 0.3s ease;
+}
+input[type="submit"],
+.avatarPicker > button {
+  color: white;
+  font-family: "Plus Jakarta Sans";
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 1.12rem 11.25rem;
+  cursor: pointer;
+  border-radius: 21px;
+  border: 2.628px solid #263bff;
+  background: #3f52ff;
+}
+input[type="submit"]:hover {
+  border-color: #4d5fff;
+  background-color: #5a6cff;
+  transition: border-color 0.3s ease-out, background-color 0.3s ease-out;
+}
+input:not(
+    input[type="submit"],
+    input[type="checkbox"],
+    input[placeholder="Search"],
+    input[placeholder="Start typing..."]
+  ) {
+  border-radius: 11px;
+  border: 0.394px solid rgba(32, 33, 36, 0.2);
+  outline: none;
+  height: 3.12rem;
+  width: 25.6rem;
+  color: black;
+  font-family: "Plus Jakarta Sans";
+  font-size: 0.87rem;
+  font-weight: 400;
+  padding-left: 1rem;
+  box-shadow: 0 0 0 1px transparent;
+}
+input::placeholder {
+  color: #908e91;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.SignUpHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 8px;
+  margin-bottom: 22px;
+  width: 100%;
+}
+input[type="checkbox"] {
+  accent-color: #3f52ff;
+  width: 1.1rem;
+  height: 1.1rem;
+}
+.RememberLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 0px;
+  color: #3f52ff;
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+}
+.social-media-icons-wrapper > img {
+  cursor: pointer;
+  width: 4.56rem;
+  height: 2.37rem;
+}
+input:not(
+    input[type="submit"],
+    input[type="checkbox"],
+    input[placeholder="Start typing..."]
+  ):focus {
+  box-shadow: 0 0 0 1px #3f52ff;
+  border-color: #3f52ff;
+}
+.invalid {
+  box-shadow: 0 0 0 1px red !important;
+  border-color: red !important;
+}
+.errorBox {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.errorBox > img {
+  width: 15px;
+  height: 15px;
+}
+.error {
+  color: red;
+  font-family: "Plus Jakarta Sans";
+  font-size: 13px;
+  font-weight: 400;
+}
+.login-register-container > a {
+  color: #3f52ff;
+  font-family: "Plus Jakarta Sans";
+  font-size: 0.87rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.login-register-container > a:hover {
+  color: rgb(144, 157, 255);
+  transition: color 0.3s ease;
+}
+.login-register-container > div {
+  color: #3f52ff;
+  font-family: "Plus Jakarta Sans";
+  font-size: 0.87rem;
+  font-weight: 300;
+}
+.login-register-container {
+  display: flex;
+  gap: 4px;
+  margin-top: 30px;
+  width: 100%;
+}
+.resetPasswordPage {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.resetPasswordPage > a {
+  text-decoration: none;
+}
+.resetBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto auto;
+  padding-bottom: 3.2rem;
+}
+input[value="Reset"] {
+  margin-top: 16px;
+}
+.message {
+  color: #3199fa;
+  font-family: "FONTSPRING DEMO - Lufga";
+  font-size: 13px;
+  font-weight: 400;
+}
+.messageBox {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.messageBox > img {
+  width: 15px;
+  height: 15px;
+}
+.SignUpRightSide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+}
+.SignUpRightSide > img {
+  width: 12.5rem;
+  height: 12.5rem;
+}
+.text {
+  color: #000;
+  text-align: center;
+  font-family: "FONTSPRING DEMO - Lufga";
+  font-size: 2.12rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3.1rem; /* 150% */
+  margin: 0 16px;
+}
+.red {
+  background-color: transparent;
+}
+.trial {
+  background-color: red;
+  width: 3px;
+  height: 0px;
+  border-radius: 5px;
+}
+.avatarPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  gap: 36px;
+  margin: auto auto;
+  align-items: center;
+}
+.avatarPicker {
+  border-radius: 39.416px;
+  border: 2.628px solid #263bff;
+  background: #f2f3ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 37px;
+  padding: 36px;
+  width: 700px;
+}
+.avatarWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+}
+.avatarWrapper > div {
+  display: flex;
+  gap: 8px;
+}
+.avatarWrapper > div > img {
+  width: 127px;
+  height: 127px;
+  background-color: white;
+  border-radius: 31px;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+.avatarWrapper > div > img:hover {
+  border: 2px solid #3f52ff;
+}
