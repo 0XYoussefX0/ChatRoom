@@ -79,9 +79,9 @@ function ForgotPassword() {
               </div>
             )}
             {message ? (
-              <div className="messageBox">
+              <div className="InboxHint">
                 <img src={mailIcon} />
-                <div className="message">
+                <div className="InboxMessage">
                   Check Your Inbox to Reset Your Password
                 </div>
               </div>

@@ -73,11 +73,11 @@ export default function ChatRoom() {
   }, [data.chatId])
 
   useEffect(() => {
-    if (typing && !data.chatId) {
+    if (typing && data.chatId) {
       updateDoc(doc(firestore, "userChats", currentUser.uid), {
         [data.chatId + ".typing"]: true,
       })
-    } else if (!typing && !data.chatId) {
+    } else if (!typing && data.chatId) {
       updateDoc(doc(firestore, "userChats", currentUser.uid), {
         [data.chatId + ".typing"]: false,
       })

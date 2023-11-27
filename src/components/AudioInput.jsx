@@ -38,6 +38,7 @@ function AudioRecorder(props) {
             const messageid = uuid()
             const chatDocRef = doc(firestore, "chats", data.chatId)
             await setDoc(doc(chatDocRef, "messages", messageid), {
+              /* update this -> */
               id: messageid,
               senderId: currentUser.uid,
               date: Timestamp.now(),

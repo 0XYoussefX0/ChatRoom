@@ -386,18 +386,18 @@ input:not(
 input[value="Reset"] {
   margin-top: 16px;
 }
-.message {
+.InboxMessage {
   color: #3199fa;
-  font-family: "FONTSPRING DEMO - Lufga";
+  font-family: "Plus Jakarta Sans";
   font-size: 13px;
-  font-weight: 400;
+  font-weight: 500;
 }
-.messageBox {
+.InboxHint {
   display: flex;
   gap: 6px;
   align-items: center;
 }
-.messageBox > img {
+.InboxHint > img {
   width: 15px;
   height: 15px;
 }

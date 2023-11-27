@@ -105,7 +105,7 @@ function Search(props) {
     setUser("")
     setUserName("")
   }
-  console.log(Object.entries(chats), "tma")
+  console.log(chats)
   return (
     <div style={{ display: "flex", flexDirection: "column", flex: "1" }}>
       <div className="searchSection">
