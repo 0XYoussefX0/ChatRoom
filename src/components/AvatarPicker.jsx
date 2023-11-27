@@ -14,7 +14,7 @@ import avatar10 from "../assets/Avatar-10.png"
 import Loading from "./Loading.jsx"
 import { HexColorPicker } from "react-colorful"
 
-import { firestore } from "../firebase.jsx"
+import { firestore } from "../utils/firebase.jsx"
 import { useAuth } from "../contexts/AuthContext.jsx"
 
 import { doc, getDoc, updateDoc } from "firebase/firestore"

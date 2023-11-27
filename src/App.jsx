@@ -7,7 +7,7 @@ import SignUp from "./pages/SignUp"
 import { BrowserRouter } from "react-router-dom"
 import { Route, Routes } from "react-router-dom"
 
-import PrivateRoute from "./PrivateRoute"
+import PrivateRoute from "./components/PrivateRoute"
 import ChatRoom from "./pages/ChatRoom"
 
 function App() {

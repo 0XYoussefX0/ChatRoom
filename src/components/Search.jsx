@@ -5,7 +5,7 @@ import micIcon from "../assets/micIcon.svg"
 
 import imageIcon from "../assets/imageIcon.png"
 import searchIcon from "../assets/searchIcon.svg"
-import { firestore } from "../firebase.jsx"
+import { firestore } from "../utils/firebase.jsx"
 import { useAuth } from "../contexts/AuthContext.jsx"
 import {
   collection,

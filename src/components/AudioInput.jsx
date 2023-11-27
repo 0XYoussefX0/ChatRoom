@@ -3,7 +3,7 @@ import micIcon from "../assets/micIcon.svg"
 import WaveSurfer from "wavesurfer.js"
 import RecordPlugin from "wavesurfer.js/dist/plugins/record.esm.js"
 
-import { storage } from "../firebase.jsx"
+import { storage } from "../utils/firebase.jsx"
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage"
 import { v4 as uuid } from "uuid"
 import {
@@ -13,7 +13,7 @@ import {
   updateDoc,
   serverTimestamp as firestoreServerTimestamp,
 } from "firebase/firestore"
-import { firestore } from "../firebase.jsx"
+import { firestore } from "../utils/firebase.jsx"
 import { useChat } from "../contexts/ChatContext.jsx"
 import { useAuth } from "../contexts/AuthContext.jsx"
 

@@ -2,7 +2,7 @@ import { useState } from "react"
 import "../styling/ChatRoom.css"
 import uploadIcon from "../assets/uploadIcon.svg"
 import closeIcon from "../assets/closeIcon.png"
-import { storage } from "../firebase.jsx"
+import { storage } from "../utils/firebase.jsx"
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage"
 import { v4 as uuid } from "uuid"
 import sendIcon from "../assets/sendIcon.png"
@@ -13,7 +13,7 @@ import {
   updateDoc,
   serverTimestamp as firestoreServerTimestamp,
 } from "firebase/firestore"
-import { firestore } from "../firebase.jsx"
+import { firestore } from "../utils/firebase.jsx"
 import { useChat } from "../contexts/ChatContext.jsx"
 import { useAuth } from "../contexts/AuthContext.jsx"
 

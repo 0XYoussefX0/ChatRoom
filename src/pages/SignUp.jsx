@@ -8,11 +8,11 @@ import appleIcon from "../assets/appleIcon.svg"
 import googleIcon from "../assets/googleIcon.svg"
 import revealEye from "../assets/revealEye.svg"
 import alertIcon from "../assets/alertIcon.png"
-import { auth } from "../firebase.jsx"
+import { auth } from "../utils/firebase.jsx"
 
 import { useAuth } from "../contexts/AuthContext.jsx"
 import { doc, setDoc } from "firebase/firestore"
-import { firestore } from "../firebase.jsx"
+import { firestore } from "../utils/firebase.jsx"
 import {
   setPersistence,
   inMemoryPersistence,

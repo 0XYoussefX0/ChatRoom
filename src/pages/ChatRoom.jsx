@@ -4,13 +4,13 @@ import { useState, useEffect } from "react"
 
 import ImageInput from "../components/ImageInput.jsx"
 
-import { firestore } from "../firebase.jsx"
+import { firestore } from "../utils/firebase.jsx"
 
 import React, { useRef } from "react"
 import "../styling/ChatRoom.css"
 import logoutIcon from "../assets/logout.svg"
 
-import { database } from "../firebase.jsx"
+import { database } from "../utils/firebase.jsx"
 import { useAuth } from "../contexts/AuthContext.jsx"
 import {
   ref,

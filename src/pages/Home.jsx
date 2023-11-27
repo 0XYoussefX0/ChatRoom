@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom"
 import memoji from "../assets/MaleMemojis1.png"
 import memoji2 from "../assets/MaleMemojis2.png"
-import "../styling/Home.css"
 
 function Home() {
   return (

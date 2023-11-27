@@ -10,7 +10,7 @@ import revealEye from "../assets/revealEye.svg"
 import alertIcon from "../assets/alertIcon.png"
 
 import { useAuth } from "../contexts/AuthContext.jsx"
-import { auth } from "../firebase.jsx"
+import { auth } from "../utils/firebase.jsx"
 import {
   setPersistence,
   inMemoryPersistence,
