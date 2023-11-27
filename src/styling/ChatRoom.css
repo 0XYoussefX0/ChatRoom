@@ -13,7 +13,7 @@
 }
 .routes > div > a {
   color: #e1e1e1;
-  font-family: "FONTSPRING DEMO - Lufga";
+  font-family: "Plus Jakarta Sans";
   font-size: 1rem;
   font-weight: 400;
   text-decoration: none;
@@ -58,7 +58,7 @@
 }
 .user-profile-bottom {
   color: #fff;
-  font-family: "FONTSPRING DEMO - Lufga";
+  font-family: "Plus Jakarta Sans";
   font-size: 1rem;
   font-weight: 400;
 }
@@ -94,7 +94,7 @@ input[placeholder="Search"]::placeholder {
 }
 .searchSection-title {
   color: #fff;
-  font-family: "FONTSPRING DEMO - Lufga";
+  font-family: "Plus Jakarta Sans";
   font-size: 2rem;
   font-weight: 400;
   margin-top: 20px;
@@ -275,7 +275,7 @@ input[placeholder="Start typing..."] {
   border: none;
   flex: 1;
   color: black;
-  font-family: "FONTSPRING DEMO - Lufga";
+  font-family: "Plus Jakarta Sans";
   font-size: 0.87rem;
   font-weight: 400;
   outline: none;
@@ -323,7 +323,7 @@ input[placeholder="Start typing..."]::placeholder {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "FONTSPRING DEMO - Lufga";
+  font-family: "Plus Jakarta Sans";
   font-size: 1.5rem;
   font-weight: 500;
   color: white;

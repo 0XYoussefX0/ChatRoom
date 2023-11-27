@@ -6,6 +6,7 @@
   background-color: white;
   width: 100vw;
   height: 100vh;
+  font-family: "Plus Jakarta Sans";
 }
 .homePage {
   display: flex;
@@ -415,7 +416,7 @@ input[value="Reset"] {
 .text {
   color: #000;
   text-align: center;
-  font-family: "FONTSPRING DEMO - Lufga";
+  font-family: "Plus Jakarta Sans";
   font-size: 2.12rem;
   font-style: normal;
   font-weight: 400;
