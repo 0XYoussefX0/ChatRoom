@@ -9,8 +9,6 @@ body {
 .homePage {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 100%;
   align-items: center;
 }
 h1 {
@@ -43,12 +41,12 @@ ul > li:nth-child(1) > a {
 }
 ul > li:nth-child(2) > a {
   text-decoration: none;
-  padding: 9.92px 33.92px 11px 33.92px;
+  padding: 0.62em 2.12em 0.68em 2.12em;
   margin-right: 8px;
   border-radius: 21.022px;
   color: #3f52ff;
   font-family: "Plus Jakarta Sans";
-  font-size: 15.456px;
+  font-size: 1rem;
   font-weight: 600;
   border: 2.628px solid transparent;
 }
@@ -62,11 +60,11 @@ ul > li:nth-child(3) > a,
   background: #3f52ff;
   text-decoration: none;
   border-radius: 21px;
-  padding: 9.92px 33.92px 11px 33.92px;
+  padding: 0.62em 2.12em 0.68em 2.12em;
   margin-right: 16px;
   color: #fff;
   font-family: "Plus Jakarta Sans";
-  font-size: 15.456px;
+  font-size: 1rem;
   font-weight: 600;
 }
 ul > li:nth-child(3) > a:hover,
@@ -105,7 +103,8 @@ h1,
 .avatarPage > h1 {
   color: #000;
   font-family: "Plus Jakarta Sans";
-  font-size: 77.376px;
+  /* font-size: calc(41px + (77 - 41) * (100vw - 320px) / (950 - 320)); */
+  font-size: 77px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -469,4 +468,27 @@ input[value="Reset"] {
 }
 .avatarWrapper > div > img:hover {
   border: 2px solid #3f52ff;
+}
+@media (max-width: 560px) {
+  ul > li:nth-child(1) > a {
+    font-size: 22px;
+    margin-left: 8px;
+  }
+  ul > li:nth-child(3) > a,
+  .homePageContent > a {
+    font-size: 0.7rem;
+    margin-right: 8px;
+  }
+  ul > li:nth-child(2) > a {
+    font-size: 0.7rem;
+  }
+  h1,
+  .avatarPage > h1 {
+    font-size: 42px;
+  }
+}
+@media (max-width: 1060px) {
+  .homePageContent > img {
+    display: none;
+  }
 }
