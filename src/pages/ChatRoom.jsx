@@ -201,7 +201,7 @@ export default function ChatRoom() {
         avatarBackgroundColor={avatarBackgroundColor}
         setAvatarBackgroundColor={setAvatarBackgroundColor}
       />
-      {avatar && (
+      {avatar && avatarBackgroundColor && (
         <>
           <div className="chatRoom">
             <div className="contentBody">

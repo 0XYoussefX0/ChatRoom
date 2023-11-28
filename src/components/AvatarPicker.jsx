@@ -19,18 +19,6 @@ import { useAuth } from "../contexts/AuthContext.jsx"
 
 import { doc, getDoc, updateDoc } from "firebase/firestore"
 
-const AvatarImage = (avatar) => {
-  return (
-    <img
-      src={avatar}
-      onClick={() => {
-        props.setAvatar(avatar)
-        props.setAvatarBackgroundColor(null)
-      }}
-    />
-  )
-}
-
 function Avatar(props) {
   const [color, setColor] = useState("#ffffff")
 
@@ -73,48 +61,35 @@ function Avatar(props) {
         <div className="avatarPage">
           <h1>Choose Your Avatar</h1>
           <div className="avatarPicker">
-            <div className="avatarWrapper">
-              <div>
-                <img src={avatar1} onClick={() => pickAvatar(avatar1)} />
-                <img src={avatar2} onClick={() => pickAvatar(avatar2)} />
-                <img src={avatar3} onClick={() => pickAvatar(avatar3)} />
-                <img src={avatar4} onClick={() => pickAvatar(avatar4)} />
-                <img src={avatar5} onClick={() => pickAvatar(avatar5)} />
-              </div>
-              <div>
-                <img src={avatar6} onClick={() => pickAvatar(avatar6)} />
-                <img src={avatar7} onClick={() => pickAvatar(avatar7)} />
-                <img src={avatar8} onClick={() => pickAvatar(avatar8)} />
-                <img src={avatar9} onClick={() => pickAvatar(avatar9)} />
-                <img src={avatar10} onClick={() => pickAvatar(avatar10)} />
-              </div>
-            </div>
+            <img src={avatar1} onClick={() => pickAvatar(avatar1)} />
+            <img src={avatar2} onClick={() => pickAvatar(avatar2)} />
+            <img src={avatar3} onClick={() => pickAvatar(avatar3)} />
+            <img src={avatar4} onClick={() => pickAvatar(avatar4)} />
+            <img src={avatar5} onClick={() => pickAvatar(avatar5)} />
+
+            <img src={avatar6} onClick={() => pickAvatar(avatar6)} />
+            <img src={avatar7} onClick={() => pickAvatar(avatar7)} />
+            <img src={avatar8} onClick={() => pickAvatar(avatar8)} />
+            <img src={avatar9} onClick={() => pickAvatar(avatar9)} />
+            <img src={avatar10} onClick={() => pickAvatar(avatar10)} />
           </div>
         </div>
       )}
       {props.avatarBackgroundColor === null && (
         <div className="avatarPage">
           <h1>Pick a Color</h1>
-          <div className="avatarPicker">
-            <div className="avatarWrapper">
-              <div
+          <div className="colorPicker">
+            <div>
+              <img
                 style={{
-                  display: "flex",
-                  gap: "5px",
-                  alignItems: "center",
+                  backgroundColor: `${color}`,
+                  borderRadius: "31px",
+                  maxWidth: "300px",
+                  width: "100%",
                 }}
-              >
-                <img
-                  style={{
-                    backgroundColor: `${color}`,
-                    borderRadius: "31px",
-                    width: "300px",
-                    height: "300px",
-                  }}
-                  src={props.avatar}
-                />
-                <HexColorPicker color={color} onChange={setColor} />
-              </div>
+                src={props.avatar}
+              />
+              <HexColorPicker color={color} onChange={setColor} />
             </div>
             <button onClick={storeAvatar}>Done</button>
           </div>

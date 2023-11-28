@@ -80,7 +80,7 @@ ul > li:nth-child(3) > a:hover,
   margin-top: 21px;
 }
 .homePageContent {
-  margin-top: 100px;
+  margin: 100px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -152,8 +152,6 @@ h1 > span,
 .SignUp {
   display: flex;
   flex-direction: column;
-  width: 100vw;
-  height: 100vh;
 }
 .inputGroup {
   position: relative;
@@ -194,7 +192,7 @@ h1 > span,
   font-weight: 400;
 }
 .OrLine {
-  width: 12.5rem;
+  flex: 1;
   height: 1px;
   background-color: #919192;
 }
@@ -204,6 +202,7 @@ h1 > span,
   justify-content: center;
   align-items: center;
   margin: auto auto;
+  padding: 70px 16px;
 }
 .social-media-icons-wrapper {
   display: flex;
@@ -215,6 +214,7 @@ h1 > span,
   align-items: center;
   gap: 16px;
   margin-bottom: 16px;
+  width: 100%;
 }
 .RememberForgotWrapper {
   display: flex;
@@ -244,12 +244,13 @@ h1 > span,
   transition: color 0.3s ease;
 }
 input[type="submit"],
-.avatarPicker > button {
+.colorPicker > button {
   color: white;
   font-family: "Plus Jakarta Sans";
   font-size: 1rem;
   font-weight: 500;
-  padding: 1.12rem 11.25rem;
+  width: 100%;
+  padding: 1.12rem 0;
   cursor: pointer;
   border-radius: 21px;
   border: 2.628px solid #263bff;
@@ -270,7 +271,7 @@ input:not(
   border: 0.394px solid rgba(32, 33, 36, 0.2);
   outline: none;
   height: 3.12rem;
-  width: 25.6rem;
+  width: calc(100% - 16px);
   color: black;
   font-family: "Plus Jakarta Sans";
   font-size: 0.87rem;
@@ -285,6 +286,7 @@ form {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
 }
 .SignUpHeader {
   display: flex;
@@ -312,8 +314,7 @@ input[type="checkbox"] {
 }
 .social-media-icons-wrapper > img {
   cursor: pointer;
-  width: 4.56rem;
-  height: 2.37rem;
+  width: 72.96px;
 }
 input:not(
     input[type="submit"],
@@ -379,7 +380,7 @@ input:not(
   justify-content: center;
   align-items: center;
   margin: auto auto;
-  padding-bottom: 3.2rem;
+  padding: 0px 1em 3.2em 1em;
 }
 input[value="Reset"] {
   margin-top: 16px;
@@ -433,32 +434,43 @@ input[value="Reset"] {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
+  min-height: 100vh;
   gap: 36px;
-  margin: auto auto;
   align-items: center;
+  padding: 0 52px;
+  margin: 100px 0;
 }
 .avatarPicker {
-  border-radius: 39.416px;
+  border-radius: 39px;
+  border: 2.628px solid #263bff;
+  background: #f2f3ff;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 127px);
+  justify-content: center;
+  gap: 46px 16px;
+  padding: 36px;
+  max-width: 700px;
+  width: 100%;
+}
+.colorPicker {
+  border-radius: 39px;
   border: 2.628px solid #263bff;
   background: #f2f3ff;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 37px;
-  padding: 36px;
-  width: 700px;
-}
-.avatarWrapper {
-  display: flex;
-  flex-direction: column;
   gap: 46px;
+  padding: 36px;
+  max-width: 700px;
+  width: 100%;
 }
-.avatarWrapper > div {
+.colorPicker > div {
   display: flex;
   gap: 8px;
+  align-items: center;
 }
-.avatarWrapper > div > img {
+.avatarPicker > img {
   width: 127px;
   height: 127px;
   background-color: white;
@@ -466,7 +478,7 @@ input[value="Reset"] {
   border: 2px solid transparent;
   cursor: pointer;
 }
-.avatarWrapper > div > img:hover {
+.avatarPicker > img:hover {
   border: 2px solid #3f52ff;
 }
 @media (max-width: 560px) {
@@ -485,6 +497,15 @@ input[value="Reset"] {
   h1,
   .avatarPage > h1 {
     font-size: 42px;
+  }
+  .backLink {
+    padding-left: 16px;
+  }
+  .social-media-icons-wrapper > img {
+    width: 57.6px;
+  }
+  .colorPicker > div {
+    flex-direction: column;
   }
 }
 @media (max-width: 1060px) {
