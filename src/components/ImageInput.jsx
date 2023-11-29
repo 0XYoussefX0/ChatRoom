@@ -1,11 +1,11 @@
 import { useState } from "react"
 import "../styling/ChatRoom.css"
-import uploadIcon from "../assets/uploadIcon.svg"
-import closeIcon from "../assets/closeIcon.png"
+import uploadIcon from "../assets/icons/uploadIcon.svg"
+import closeIcon from "../assets/icons/closeIcon.png"
 import { storage } from "../utils/firebase.jsx"
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage"
 import { v4 as uuid } from "uuid"
-import sendIcon from "../assets/sendIcon.png"
+import sendIcon from "../assets/icons/sendIcon.png"
 import {
   doc,
   Timestamp,

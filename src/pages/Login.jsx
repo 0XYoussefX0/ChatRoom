@@ -1,13 +1,13 @@
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 
-import BackIcon from "../assets/BackIcon.svg"
-import facebookIcon from "../assets/facebookIcon.svg"
-import twitterIcon from "../assets/twitterIcon.svg"
-import appleIcon from "../assets/appleIcon.svg"
-import googleIcon from "../assets/googleIcon.svg"
-import revealEye from "../assets/revealEye.svg"
-import alertIcon from "../assets/alertIcon.png"
+import BackIcon from "../assets/icons/BackIcon.svg"
+import facebookLogo from "../assets/socialMediaLogos/facebookLogo.svg"
+import twitterLogo from "../assets/socialMediaLogos/twitterLogo.svg"
+import appleLogo from "../assets/socialMediaLogos/appleLogo.svg"
+import googleLogo from "../assets/socialMediaLogos/googleLogo.svg"
+import revealEye from "../assets/icons/revealEye.svg"
+import alertIcon from "../assets/icons/alertIcon.png"
 
 import { useAuth } from "../contexts/AuthContext.jsx"
 import { auth } from "../utils/firebase.jsx"
@@ -151,10 +151,10 @@ function Login() {
             <p>Enter your email and password to login</p>
           </div>
           <div className="social-media-icons-wrapper">
-            <img onClick={facebookSignIn} src={facebookIcon} />
-            <img onClick={googleSignIn} src={googleIcon} />
-            <img onClick={appleSignIn} src={appleIcon} />
-            <img onClick={twitterSignIn} src={twitterIcon} />
+            <img onClick={facebookSignIn} src={facebookLogo} />
+            <img onClick={googleSignIn} src={googleLogo} />
+            <img onClick={appleSignIn} src={appleLogo} />
+            <img onClick={twitterSignIn} src={twitterLogo} />
           </div>
           <div className="OrDivider">
             <div className="OrLine"></div>

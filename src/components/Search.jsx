@@ -1,10 +1,10 @@
 import React, { useEffect } from "react"
 import { useState } from "react"
 import "../styling/ChatRoom.css"
-import micIcon from "../assets/micIcon.svg"
+import micIcon from "../assets/icons/micIcon.svg"
 
-import imageIcon from "../assets/imageIcon.png"
-import searchIcon from "../assets/searchIcon.svg"
+import imageIcon from "../assets/icons/imageIcon.png"
+import searchIcon from "../assets/icons/searchIcon.svg"
 import { firestore } from "../utils/firebase.jsx"
 import { useAuth } from "../contexts/AuthContext.jsx"
 import {

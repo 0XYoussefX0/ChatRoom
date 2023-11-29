@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom"
-import memoji from "../assets/MaleMemojis1.png"
-import memoji2 from "../assets/MaleMemojis2.png"
 
 function Home() {
   return (
@@ -26,8 +24,6 @@ function Home() {
             <br />
             Conversations and Meetings
           </h1>
-          <img src={memoji} />
-          <img src={memoji2} />
           <p>
             Experience seamless and secure remote communication with ChatBox,
             the

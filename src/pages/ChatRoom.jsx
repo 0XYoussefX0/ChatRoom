@@ -8,7 +8,7 @@ import { firestore } from "../utils/firebase.jsx"
 
 import React, { useRef } from "react"
 import "../styling/ChatRoom.css"
-import logoutIcon from "../assets/logout.svg"
+import logoutIcon from "../assets/icons/logout.svg"
 
 import { database } from "../utils/firebase.jsx"
 import { useAuth } from "../contexts/AuthContext.jsx"

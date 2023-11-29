@@ -1,9 +1,9 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
 
-import alertIcon from "../assets/alertIcon.png"
-import BackIcon from "../assets/BackIcon.svg"
-import mailIcon from "../assets/mailIcon.png"
+import alertIcon from "../assets/icons/alertIcon.png"
+import BackIcon from "../assets/icons/BackIcon.svg"
+import mailIcon from "../assets/icons/mailIcon.png"
 
 import { useAuth } from "../contexts/AuthContext.jsx"
 

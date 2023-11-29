@@ -86,24 +86,10 @@ ul > li:nth-child(3) > a:hover,
   align-items: center;
   position: relative;
 }
-.homePageContent > img {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-}
-.homePageContent > img:nth-child(2) {
-  bottom: 90px;
-  right: 60px;
-}
-.homePageContent > img:nth-child(3) {
-  bottom: 40px;
-  left: 90px;
-}
 h1,
 .avatarPage > h1 {
   color: #000;
   font-family: "Plus Jakarta Sans";
-  /* font-size: calc(41px + (77 - 41) * (100vw - 320px) / (950 - 320)); */
   font-size: 77px;
   font-style: normal;
   font-weight: 600;

@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react"
-import micIcon from "../assets/micIcon.svg"
+import micIcon from "../assets/icons/micIcon.svg"
 import WaveSurfer from "wavesurfer.js"
 import RecordPlugin from "wavesurfer.js/dist/plugins/record.esm.js"
 
