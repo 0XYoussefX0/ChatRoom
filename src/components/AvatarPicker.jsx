@@ -57,44 +57,46 @@ function Avatar(props) {
 
   return (
     <>
-      {props.avatar === null && (
-        <div className="avatarPage">
-          <h1>Choose Your Avatar</h1>
-          <div className="avatarPicker">
-            <img src={avatar1} onClick={() => pickAvatar(avatar1)} />
-            <img src={avatar2} onClick={() => pickAvatar(avatar2)} />
-            <img src={avatar3} onClick={() => pickAvatar(avatar3)} />
-            <img src={avatar4} onClick={() => pickAvatar(avatar4)} />
-            <img src={avatar5} onClick={() => pickAvatar(avatar5)} />
+      <div className="avatarPage">
+        {props.avatar === null && (
+          <>
+            <h1>Choose Your Avatar</h1>
+            <div className="avatarPicker">
+              <img src={avatar1} onClick={() => pickAvatar(avatar1)} />
+              <img src={avatar2} onClick={() => pickAvatar(avatar2)} />
+              <img src={avatar3} onClick={() => pickAvatar(avatar3)} />
+              <img src={avatar4} onClick={() => pickAvatar(avatar4)} />
+              <img src={avatar5} onClick={() => pickAvatar(avatar5)} />
 
-            <img src={avatar6} onClick={() => pickAvatar(avatar6)} />
-            <img src={avatar7} onClick={() => pickAvatar(avatar7)} />
-            <img src={avatar8} onClick={() => pickAvatar(avatar8)} />
-            <img src={avatar9} onClick={() => pickAvatar(avatar9)} />
-            <img src={avatar10} onClick={() => pickAvatar(avatar10)} />
-          </div>
-        </div>
-      )}
-      {props.avatarBackgroundColor === null && (
-        <div className="avatarPage">
-          <h1>Pick a Color</h1>
-          <div className="colorPicker">
-            <div>
-              <img
-                style={{
-                  backgroundColor: `${color}`,
-                  borderRadius: "31px",
-                  maxWidth: "300px",
-                  width: "100%",
-                }}
-                src={props.avatar}
-              />
-              <HexColorPicker color={color} onChange={setColor} />
+              <img src={avatar6} onClick={() => pickAvatar(avatar6)} />
+              <img src={avatar7} onClick={() => pickAvatar(avatar7)} />
+              <img src={avatar8} onClick={() => pickAvatar(avatar8)} />
+              <img src={avatar9} onClick={() => pickAvatar(avatar9)} />
+              <img src={avatar10} onClick={() => pickAvatar(avatar10)} />
             </div>
-            <button onClick={storeAvatar}>Done</button>
-          </div>
-        </div>
-      )}
+          </>
+        )}
+        {props.avatarBackgroundColor === null && (
+          <>
+            <h1>Pick a Color</h1>
+            <div className="colorPicker">
+              <div>
+                <img
+                  style={{
+                    backgroundColor: `${color}`,
+                    borderRadius: "31px",
+                    maxWidth: "300px",
+                    width: "100%",
+                  }}
+                  src={props.avatar}
+                />
+                <HexColorPicker color={color} onChange={setColor} />
+              </div>
+              <button onClick={storeAvatar}>Done</button>
+            </div>
+          </>
+        )}
+      </div>
       {props.avatar === undefined && <Loading />}
     </>
   )

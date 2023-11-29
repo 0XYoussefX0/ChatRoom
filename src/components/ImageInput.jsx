@@ -11,6 +11,7 @@ import {
   Timestamp,
   setDoc,
   updateDoc,
+  arrayUnion,
   serverTimestamp as firestoreServerTimestamp,
 } from "firebase/firestore"
 import { firestore } from "../utils/firebase.jsx"
@@ -37,13 +38,13 @@ function ImageInput(props) {
 
     await getDownloadURL(imagesRef).then(async (url) => {
       const messageid = uuid()
-      const chatDocRef = doc(firestore, "chats", data.chatId)
-      await setDoc(doc(chatDocRef, "messages", messageid), {
-        id: messageid,
-        senderId: currentUser.uid,
-        date: Timestamp.now(),
-        seen: false,
-        sentImage: url,
+      await setDoc(doc(firestore, "chats", data.chatId), {
+        messages: arrayUnion({
+          id: messageid,
+          senderId: currentUser.uid,
+          date: Timestamp.now(),
+          sentImage: url,
+        }),
       })
 
       await updateDoc(doc(firestore, "userChats", currentUser.uid), {

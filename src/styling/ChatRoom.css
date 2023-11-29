@@ -280,6 +280,7 @@ input[placeholder="Start typing..."] {
   font-weight: 400;
   outline: none;
   border-top: 1px solid #f0f1ff;
+  width: calc(100% - 68px - 10px - 68px);
 }
 input[placeholder="Start typing..."]::placeholder {
   color: #6a6a6f;

@@ -11,8 +11,10 @@ import {
   Timestamp,
   setDoc,
   updateDoc,
+  arrayUnion,
   serverTimestamp as firestoreServerTimestamp,
 } from "firebase/firestore"
+
 import { firestore } from "../utils/firebase.jsx"
 import { useChat } from "../contexts/ChatContext.jsx"
 import { useAuth } from "../contexts/AuthContext.jsx"
@@ -36,14 +38,14 @@ function AudioRecorder(props) {
           })
           await getDownloadURL(audiosRef).then(async (url) => {
             const messageid = uuid()
-            const chatDocRef = doc(firestore, "chats", data.chatId)
-            await setDoc(doc(chatDocRef, "messages", messageid), {
+            await setDoc(doc(firestore, "chats", data.chatId), {
               /* update this -> */
-              id: messageid,
-              senderId: currentUser.uid,
-              date: Timestamp.now(),
-              seen: false,
-              sentAudio: url,
+              messages: arrayUnion({
+                id: messageid,
+                senderId: currentUser.uid,
+                date: Timestamp.now(),
+                sentAudio: url,
+              }),
             })
 
             await updateDoc(doc(firestore, "userChats", currentUser.uid), {
