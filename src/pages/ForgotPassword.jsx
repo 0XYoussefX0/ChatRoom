@@ -38,7 +38,7 @@ function ForgotPassword() {
       padding: "0 0.4rem",
     }),
   }
-  /*put this page against the sign up page and fix its styling and after that clean up the code and commit the changes to github*/
+
   return (
     <>
       <div className="resetPasswordPage">

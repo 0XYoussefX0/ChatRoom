@@ -44,12 +44,10 @@ function Search(props) {
   }, [currentUser.uid])
 
   const handleInput = (e) => {
-    console.log("handleInput called")
     e.key === "Enter" && searchForUser()
   }
 
   const searchForUser = async () => {
-    console.log("SearchForUser called")
     const q = query(
       collection(firestore, "users"),
       where("displayName", "==", userName)
@@ -66,7 +64,6 @@ function Search(props) {
   }
 
   const handleSelect = async () => {
-    console.log("handleSelect called")
     const combinedId =
       currentUser.uid > user.uid
         ? currentUser.uid + user.uid
@@ -105,7 +102,6 @@ function Search(props) {
     setUser("")
     setUserName("")
   }
-  console.log(chats)
   return (
     <div style={{ display: "flex", flexDirection: "column", flex: "1" }}>
       <div className="searchSection">
@@ -136,16 +132,7 @@ function Search(props) {
           </div>
         </div>
       )}
-      <div
-        className="friendsList"
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          overflow: "scroll",
-          flex: "1",
-        }}
-      >
+      <div className="friendsList">
         {Object.entries(chats)
           ?.sort((a, b) => b[1].date - a[1].date)
           .map((chat) => {
@@ -179,56 +166,18 @@ function Search(props) {
                       <div className="messageSender">
                         {chat[1].userInfo?.displayName}
                       </div>
-                      <div
-                        className="message"
-                        style={{
-                          overflow: "hidden",
-                          maxWidth: "97px",
-                          textOverflow: "ellipsis",
-                          whiteSpace: "nowrap",
-                        }}
-                      >
+                      <div className="message">
                         {chat[1].lastMessage?.formValue}
                         {chat[1].lastMessage?.sentImage && (
-                          <div
-                            style={{
-                              display: "flex",
-                              gap: "4px",
-                              alignItems: "center",
-                            }}
-                          >
-                            <img src={imageIcon} style={{ height: "16px" }} />
-                            <div
-                              style={{
-                                color: "#6a6a6f",
-                                fontFamily: "Plus Jakarta Sans",
-                                fontSize: "13px",
-                                fontWeight: "500",
-                              }}
-                            >
-                              Image
-                            </div>
+                          <div className="skeletonImageContainer">
+                            <img src={imageIcon} />
+                            <div>Image</div>
                           </div>
                         )}
                         {chat[1].lastMessage?.sentAudio && (
-                          <div
-                            style={{
-                              display: "flex",
-                              gap: "4px",
-                              alignItems: "center",
-                            }}
-                          >
-                            <img src={micIcon} style={{ height: "14px" }} />
-                            <div
-                              style={{
-                                color: "#6a6a6f",
-                                fontFamily: "Plus Jakarta Sans",
-                                fontSize: "13px",
-                                fontWeight: "500",
-                              }}
-                            >
-                              Audio
-                            </div>
+                          <div className="skeletonAudioContainer">
+                            <img src={micIcon} />
+                            <div>Audio</div>
                           </div>
                         )}
                       </div>

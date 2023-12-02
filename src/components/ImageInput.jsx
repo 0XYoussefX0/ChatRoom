@@ -32,13 +32,11 @@ function ImageInput(props) {
   const sendImage = async () => {
     const imagesRef = ref(storage, "images/" + uuid())
 
-    await uploadBytes(imagesRef, image).then((snapshot) => {
-      console.log("uploaded")
-    })
+    await uploadBytes(imagesRef, image)
 
     await getDownloadURL(imagesRef).then(async (url) => {
       const messageid = uuid()
-      await setDoc(doc(firestore, "chats", data.chatId), {
+      await updateDoc(doc(firestore, "chats", data.chatId), {
         messages: arrayUnion({
           id: messageid,
           senderId: currentUser.uid,
@@ -85,64 +83,18 @@ function ImageInput(props) {
           type="file"
           accept="image/*"
           id="image-input"
-          style={{ display: "none" }}
           onChange={(e) => setImage(e.target.files[0])}
         />
         {image && (
           <>
-            <div
-              style={{
-                background: "#f0f1ff",
-                padding: "5px",
-                borderRadius: "10px",
-                margin: "5px",
-                position: "relative",
-              }}
-            >
-              <img
-                src={URL.createObjectURL(image)}
-                alt="Selected image"
-                style={{
-                  maxWidth: "100%",
-                  maxHeight: "100%",
-                }}
-              />
-              <button type="button" onClick={close}>
-                <img
-                  src={closeIcon}
-                  style={{
-                    position: "absolute",
-                    background: "white",
-                    width: "15px",
-                    height: "15px",
-                    borderRadius: "50%",
-                    padding: "3px",
-                    top: "0",
-                    right: "0",
-                    marginTop: "6px",
-                    marginRight: "6px",
-                    cursor: "pointer",
-                  }}
-                />
+            <div className="pickedImageContainer">
+              <img src={URL.createObjectURL(image)} alt="Selected image" />
+              <button type="button" className="closeButton" onClick={close}>
+                <img src={closeIcon} />
               </button>
             </div>
-            <button
-              onClick={sendImage}
-              type="button"
-              style={{
-                border: "none",
-                backgroundColor: "#3f52ff",
-                color: "white",
-                borderRadius: "11px",
-                padding: "10px 10px 7px 10px",
-                margin: "10px",
-                cursor: "pointer",
-              }}
-            >
-              <img
-                src={sendIcon}
-                style={{ width: "20px", margin: "auto auto" }}
-              />
+            <button onClick={sendImage} type="button" className="sendButton">
+              <img src={sendIcon} />
             </button>
           </>
         )}

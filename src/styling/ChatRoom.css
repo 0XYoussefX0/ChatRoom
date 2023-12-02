@@ -138,6 +138,22 @@ input[placeholder="Search"]::placeholder {
   margin: 8px 0px 8px 16px;
   align-items: center;
 }
+.statusIndicators > div:nth-child(1) {
+  position: relative;
+}
+.statusIndicators > div:nth-child(1) > img {
+  width: 48px;
+  height: 48px;
+  font-size: 2.5rem;
+}
+.peerOnlineStatus {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
 .contentBody {
   flex: 1;
   display: flex;
@@ -150,6 +166,38 @@ input[placeholder="Search"]::placeholder {
   margin-bottom: 4px;
 }
 .message {
+  color: #6a6a6f;
+  font-family: "Plus Jakarta Sans";
+  font-size: 13px;
+  font-weight: 500;
+  overflow: hidden;
+  max-width: 97px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.skeletonImageContainer {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+.skeletonImageContainer > img {
+  height: 16px;
+}
+.skeletonImageContainer > div {
+  color: #6a6a6f;
+  font-family: "Plus Jakarta Sans";
+  font-size: 13px;
+  font-weight: 500;
+}
+.skeletonAudioContainer {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+.skeletonAudioContainer > img {
+  height: 14px;
+}
+.skeletonAudioContainer > div {
   color: #6a6a6f;
   font-family: "Plus Jakarta Sans";
   font-size: 13px;
@@ -244,6 +292,7 @@ input[placeholder="Search"]::placeholder {
   flex: 1;
   overflow: scroll;
   overflow-x: hidden;
+  max-height: 82vh;
 
   &::-webkit-scrollbar {
     width: 7px;
@@ -348,4 +397,39 @@ input[placeholder="Start typing..."]::placeholder {
 }
 .friendsList {
   scrollbar-width: none;
+}
+.friendsList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: scroll;
+  flex: 1;
+}
+.userInfo {
+  display: flex;
+  gap: 11px;
+  margin: 11px 0px 0px 28px;
+  align-items: center;
+}
+.userAvatar {
+  border-radius: 12px;
+  width: 71px;
+  height: 71px;
+}
+.logoutButton {
+  display: flex;
+  color: #f92c2c;
+  font-family: "Plus Jakarta Sans";
+  font-size: 12.5px;
+  font-weight: 600;
+  border: none;
+  background: none;
+  gap: 5px;
+}
+.userName {
+  color: #000;
+  font-family: "Plus Jakarta Sans";
+  font-size: 23px;
+  font-weight: 600;
+  text-transform: capitalize;
 }

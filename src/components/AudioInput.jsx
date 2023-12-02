@@ -33,13 +33,10 @@ function AudioRecorder(props) {
         record.stopRecording()
         record.on("record-end", async (blob) => {
           const audiosRef = ref(storage, "audios/" + uuid())
-          await uploadBytes(audiosRef, blob).then((snapshot) => {
-            console.log("uploaded successfully")
-          })
+          await uploadBytes(audiosRef, blob)
           await getDownloadURL(audiosRef).then(async (url) => {
             const messageid = uuid()
-            await setDoc(doc(firestore, "chats", data.chatId), {
-              /* update this -> */
+            await updateDoc(doc(firestore, "chats", data.chatId), {
               messages: arrayUnion({
                 id: messageid,
                 senderId: currentUser.uid,
@@ -63,13 +60,11 @@ function AudioRecorder(props) {
             })
           })
         })
-        console.log("stopped recording")
       }
 
       if (wavesurfer) {
         wavesurfer.destroy()
         wavesurfer = null
-        console.log(wavesurfer, "is destroyed")
         props.setAudioInputIsFocused(false)
       } else {
         props.setAudioInputIsFocused(true)
@@ -86,17 +81,11 @@ function AudioRecorder(props) {
         recButton.current.disabled = true
 
         record.startRecording().then(() => {
-          console.log("recording...")
-
           recButton.current.disabled = false
         })
       }
     }
   }, [])
-
-  // Initialize the Record plugin
-
-  // Render recorded audio
 
   return (
     <>
@@ -105,16 +94,10 @@ function AudioRecorder(props) {
         id="waveform"
         style={{
           width: props.audioInputIsFocused ? "100%" : null,
-          maxHeight: "100%",
-          margin: "10px",
         }}
       ></div>
 
-      <button
-        style={{ border: "none", background: "none" }}
-        ref={recButton}
-        type="button"
-      >
+      <button className="recordButton" ref={recButton} type="button">
         <img src={micIcon} className="micIcon" />
       </button>
     </>

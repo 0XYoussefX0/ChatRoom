@@ -224,20 +224,19 @@ export default function ChatRoom() {
                 <path
                   d="M4 4L44 44"
                   stroke="black"
-                  stroke-width="8"
-                  stroke-linecap="round"
+                  strokeWidth="8"
+                  strokeLinecap="round"
                 />
                 <path
                   d="M44 44L4 84"
                   stroke="black"
-                  stroke-width="8"
-                  stroke-linecap="round"
+                  strokeWidth="8"
+                  strokeLinecap="round"
                 />
               </svg>
             </button>
             <div
               className={`profileContainer ${showProfile ? "slide-in" : null}`}
-              style={{ display: "flex", flexDirection: "column" }}
             >
               <button
                 className="profileToggleButton absolutePosition"
@@ -253,59 +252,28 @@ export default function ChatRoom() {
                   <path
                     d="M4 4L44 44"
                     stroke="black"
-                    stroke-width="8"
-                    stroke-linecap="round"
+                    strokeWidth="8"
+                    strokeLinecap="round"
                   />
                   <path
                     d="M44 44L4 84"
                     stroke="black"
-                    stroke-width="8"
-                    stroke-linecap="round"
+                    strokeWidth="8"
+                    strokeLinecap="round"
                   />
                 </svg>
               </button>
-              <div
-                style={{
-                  display: "flex",
-                  gap: "11px",
-                  margin: "11px 0px 0px 28px",
-                  alignItems: "center",
-                }}
-              >
+              <div className="userInfo">
                 <img
+                  className="userAvatar"
                   src={avatar}
                   style={{
                     backgroundColor: `${avatarBackgroundColor}`,
-                    borderRadius: "12px",
-                    width: "71px",
-                    height: "71px",
                   }}
                 />
                 <div>
-                  <div
-                    style={{
-                      color: "#000",
-                      fontFamily: "Plus Jakarta Sans",
-                      fontSize: "23px",
-                      fontWeight: "600",
-                      textTransform: "capitalize",
-                    }}
-                  >
-                    {currentUser.displayName}
-                  </div>
-                  <button
-                    onClick={handleLogout}
-                    style={{
-                      display: "flex",
-                      color: "#F92C2C",
-                      fontFamily: "Plus Jakarta Sans",
-                      fontSize: "12.5px",
-                      fontWeight: "600",
-                      border: "none",
-                      background: "none",
-                      gap: "5px",
-                    }}
-                  >
+                  <div className="userName">{currentUser.displayName}</div>
+                  <button onClick={handleLogout} className="logoutButton">
                     <img src={logoutIcon} />
                     Logout
                   </button>
@@ -321,25 +289,17 @@ export default function ChatRoom() {
             <div className="chatInterface">
               {data.user.avatar && (
                 <div className="statusIndicators">
-                  <div style={{ position: "relative" }}>
+                  <div>
                     <img
                       src={data.user.avatar}
                       style={{
-                        width: "48px",
-                        height: "48px",
                         backgroundColor: `${data.user?.color}`,
-                        fontSize: "2.5rem",
                       }}
                       className="sidebar-bottom-user-image"
                     />
                     <div
+                      className="peerOnlineStatus"
                       style={{
-                        width: "10px",
-                        height: "10px",
-                        borderRadius: "50%",
-                        position: "absolute",
-                        bottom: "0",
-                        right: "0",
                         backgroundColor: `${online ? "#77ed91" : "#908E91"}`,
                       }}
                     ></div>
@@ -382,7 +342,7 @@ export default function ChatRoom() {
               <div className="conversationArea">
                 {data.chatId && (
                   <>
-                    <div className="chatWindow" style={{ maxHeight: "82vh" }}>
+                    <div className="chatWindow">
                       {messages &&
                         Object.entries(messagesByDate).map(([date, msgs]) => {
                           const Today = new Date()
@@ -449,12 +409,6 @@ export default function ChatRoom() {
                           audioInputIsFocused={audioInputIsFocused}
                         />
                       )}
-                      {/*
-                      <button type="submit" className="submitChatInput">
-                        <img src={sendIcon} />
-                      </button>
-                      
-                      */}
                     </form>
                   </>
                 )}

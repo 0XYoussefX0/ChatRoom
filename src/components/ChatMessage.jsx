@@ -6,8 +6,6 @@ export default function ChatMessage(props) {
   const { currentUser } = useAuth()
   const audioWrapper = useRef()
 
-  console.log(props.message)
-
   const messageClass =
     props.message.senderId === currentUser.uid ? "sent" : "received"
 
@@ -45,18 +43,7 @@ export default function ChatMessage(props) {
           )}
         </div>
 
-        <div
-          style={{
-            color: "white",
-            fontSize: "10px",
-            fontWeight: "400",
-            display: "flex",
-            alignItems: "center",
-            gap: "2px",
-          }}
-        >
-          {messageTime}
-        </div>
+        <div className="sentMessageTime">{messageTime}</div>
       </div>
     </>
   )

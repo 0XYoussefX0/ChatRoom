@@ -31,7 +31,6 @@ function Avatar(props) {
         props.setAvatar(docSnap.data().avatar)
         props.setAvatarBackgroundColor(docSnap.data().color)
       } else {
-        console.log("Error")
         props.setAvatar(null)
       }
     })
@@ -84,9 +83,6 @@ function Avatar(props) {
                 <img
                   style={{
                     backgroundColor: `${color}`,
-                    borderRadius: "31px",
-                    maxWidth: "300px",
-                    width: "100%",
                   }}
                   src={props.avatar}
                 />

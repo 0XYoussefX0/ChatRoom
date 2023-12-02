@@ -71,8 +71,6 @@ function SignUp() {
     try {
       const res = await signup(email, password)
       await updateTheUserName(username)
-        .then(() => console.log("noice"))
-        .catch(() => console.log("so bad"))
       await setDoc(doc(firestore, "users", res.user.uid), {
         uid: res.user.uid,
         displayName: username,
