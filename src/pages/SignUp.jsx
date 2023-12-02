@@ -136,10 +136,10 @@ function SignUp() {
             <p>Enter your email and password to sign in</p>
           </div>
           <div className="social-media-icons-wrapper">
-            <img src={facebookIcon} />
-            <img src={googleIcon} />
-            <img src={appleIcon} />
-            <img src={twitterIcon} />
+            <img src={facebookLogo} />
+            <img src={googleLogo} />
+            <img src={appleLogo} />
+            <img src={twitterLogo} />
           </div>
           <div className="OrDivider">
             <div className="OrLine"></div>
