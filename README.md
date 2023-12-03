@@ -19,7 +19,6 @@
     </li>
     <li><a href="#running">Running</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -103,14 +102,6 @@ Project Link: [https://chatroom-f58.pages.dev/](https://chatroom-f58.pages.dev/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* [reddit post that inspired me to create this project](https://www.reddit.com/r/reactjs/comments/gi1rsc/interactive_paycard_using_react_hooks/)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
