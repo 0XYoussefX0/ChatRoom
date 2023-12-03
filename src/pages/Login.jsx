@@ -13,7 +13,6 @@ import { useAuth } from "../contexts/AuthContext.jsx"
 import { auth } from "../utils/firebase.jsx"
 import {
   setPersistence,
-  inMemoryPersistence,
   browserSessionPersistence,
   browserLocalPersistence,
 } from "firebase/auth"
@@ -37,13 +36,7 @@ function Login() {
   const navigate = useNavigate()
 
   if (rememberMe) {
-    console.log(rememberMe)
-    /*not working for some odd reason*/
     setPersistence(auth, browserLocalPersistence)
-      .then(() => {
-        console.log("success")
-      })
-      .catch((e) => console.log(e))
   } else {
     setPersistence(auth, browserSessionPersistence)
   }
@@ -213,8 +206,8 @@ function Login() {
                 <input
                   type="checkbox"
                   checked={rememberMe}
-                  onChange={() => {
-                    setRememberMe(!rememberMe)
+                  onChange={(e) => {
+                    setRememberMe(e.target.value)
                   }}
                 />
                 Keep me logged in

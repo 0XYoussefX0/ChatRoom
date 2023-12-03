@@ -15,7 +15,6 @@ import { doc, setDoc } from "firebase/firestore"
 import { firestore } from "../utils/firebase.jsx"
 import {
   setPersistence,
-  inMemoryPersistence,
   browserSessionPersistence,
   browserLocalPersistence,
 } from "firebase/auth"
@@ -35,13 +34,7 @@ function SignUp() {
   const navigate = useNavigate()
 
   if (rememberMe) {
-    console.log(rememberMe)
-    /*not working for some odd reason*/
     setPersistence(auth, browserLocalPersistence)
-      .then(() => {
-        console.log("success")
-      })
-      .catch((e) => console.log(e))
   } else {
     setPersistence(auth, browserSessionPersistence)
   }
