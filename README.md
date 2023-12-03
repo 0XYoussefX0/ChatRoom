@@ -99,7 +99,7 @@ Production environment :
 
 Youssef Abelouas - [Linkedin](https://www.linkedin.com/) - youssef.abelouass@gmail.com
 
-Project Link: [react-paycard.pages.dev](https://react-paycard.pages.dev/)
+Project Link: [https://chatroom-f58.pages.dev/](https://chatroom-f58.pages.dev/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -117,22 +117,22 @@ Project Link: [react-paycard.pages.dev](https://react-paycard.pages.dev/)
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [Demo]: images/screenshot.png
-[Html]: https://img.shields.io/badge/HTML-000000?style=for-the-badge&logo=html&logoColor=black
+[Html]: https://img.shields.io/badge/HTML-000000?style=for-the-badge&logo=html5
 [Html-url]: https://developer.mozilla.org/en-US/docs/Web/HTML
-[Css]: https://img.shields.io/badge/CSS-000000?style=for-the-badge&logo=css&logoColor=black
+[Css]: https://img.shields.io/badge/CSS-000000?style=for-the-badge&logo=css3&logoColor=%231572B6
 [Css-url]: https://developer.mozilla.org/en-US/docs/Web/CSS
-[Javascript]: https://img.shields.io/badge/JAVASCRIPT-000000?style=for-the-badge&logo=javascript&logoColor=black
+[Javascript]: https://img.shields.io/badge/JAVASCRIPT-000000?style=for-the-badge&logo=javascript
 [Javascript-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
-[React]: https://img.shields.io/badge/REACT-000000?style=for-the-badge&logo=react&logoColor=black
+[React]: https://img.shields.io/badge/REACT-000000?style=for-the-badge&logo=react
 [React-url]: https://react.dev/
-[Git]: https://img.shields.io/badge/GIT-000000?style=for-the-badge&logo=git&logoColor=black
+[Git]: https://img.shields.io/badge/GIT-000000?style=for-the-badge&logo=git
 [Git-url]: https://git-scm.com/
-[Github]: https://img.shields.io/badge/GITHUB-000000?style=for-the-badge&logo=github&logoColor=black
+[Github]: https://img.shields.io/badge/GITHUB-000000?style=for-the-badge&logo=github
 [Github-url]: https://github.com/
-[Firebase]: https://img.shields.io/badge/FIREBASE-000000?style=for-the-badge&logo=firebase&logoColor=black
+[Firebase]: https://img.shields.io/badge/FIREBASE-000000?style=for-the-badge&logo=firebase
 [Firebase-url]: https://firebase.google.com/
-[Figma]: https://img.shields.io/badge/FIGMA-000000?style=for-the-badge&logo=figma&logoColor=black
+[Figma]: https://img.shields.io/badge/FIGMA-000000?style=for-the-badge&logo=figma
 [Figma-url]: https://www.figma.com/
-[React Router]: https://img.shields.io/badge/REACT_ROUTER-000000?style=for-the-badge&logo=react%20router&logoColor=black
+[React Router]: https://img.shields.io/badge/REACT_ROUTER-000000?style=for-the-badge&logo=react%20router
 [ReactRouter-url]: https://reactrouter.com/en/main
 
