@@ -27,7 +27,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][Demo]](https://example.com)
+![ChatRoom](https://github.com/0XYoussefX0/Landing-Page-for-Mobile-App/assets/151054138/9733cde1-8cb8-41f9-921d-74b675d184f4)
 
 A chat app that gives the user the ability to sign in, add friends and chat with them in real time
 
@@ -107,7 +107,6 @@ Project Link: [https://chatroom-f58.pages.dev/](https://chatroom-f58.pages.dev/)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[Demo]: images/screenshot.png
 [Html]: https://img.shields.io/badge/HTML-000000?style=for-the-badge&logo=html5
 [Html-url]: https://developer.mozilla.org/en-US/docs/Web/HTML
 [Css]: https://img.shields.io/badge/CSS-000000?style=for-the-badge&logo=css3&logoColor=%231572B6
