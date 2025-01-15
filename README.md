@@ -98,8 +98,6 @@ Production environment :
 
 Youssef Abelouas - [Linkedin](https://www.linkedin.com/) - youssef.abelouass@gmail.com
 
-Project Link: [https://chatroom-f58.pages.dev/](https://chatroom-f58.pages.dev/)
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
